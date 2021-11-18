@@ -1,0 +1,104 @@
+/** @format */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  transition: all 0.3s ease;
+}
+.env-text.active {
+  height: 0px;
+  display: none;
+}
+#env-text1 {
+  /* visibility: hidden; */
+  height: 0px;
+  transition: all 0.3s ease;
+  transition-delay: 0.3s;
+  width:100%;
+}
+#env-text1.active {
+  /* visibility:visible; */
+  height: 100%;
+  transition: all 0.3s ease;
+  transition-delay: 0.3s;
+}
+#env-text2 {
+  visibility: hidden;
+  height: 0px;
+  transition: all 0.3s ease;
+  transition-delay: 0.1s;
+  width:100%;
+}
+#env-text2.active {
+  visibility: visible;
+  height: 100%;
+  transition: all 0.3s ease;
+  transition-delay: 0.1s;
+}
+#env-text3 {
+  visibility: hidden;
+  height: 0px;
+  transition: all 0.3s ease;
+  transition-delay: 0.1s;
+  line-height: 25px;
+  width:100%;
+}
+#env-text3.active {
+  visibility: visible;
+  height: 100%;
+  transition: all 0.3s ease;
+  transition-delay: 0.1s;
+}
+.fa-chevron-down.active {
+  transform: rotate(180deg);
+  transition: all 0.3s ease;
+  transition-delay: 0.1s;
+}
+
+@media (max-width: 1060px) {
+  .app-body {
+    margin: 0px 0px 0px 0px;
+  }
+  .Info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .Info article {
+    display: block;
+    margin-bottom: 80px;
+  }
+  .Info article .info-text h2 {
+    font-size: 40px;
+  }
+  .Info article .images .firstImg {
+    height: 70px;
+    position: relative;
+  }
+  .Info article .images {
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+  }
+  .Info article img {
+    position: relative;
+  }
+  .Info article .images .secondImg {
+    height: 70px;
+    position: relative;
+  }
+  .Info article .images .thirdImg {
+    height: 70px;
+    position: relative;
+  }
+  .Info .enroll {
+    margin-top: 70px;
+  }
+
+  footer {
+    width: 100%;
+  }
+}
