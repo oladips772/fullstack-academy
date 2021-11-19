@@ -8,6 +8,13 @@
 body {
   transition: all 0.3s ease;
 }
+a{
+  text-decoration: none;
+  font-size: larger;
+  margin-right: 38px;
+  color:black;
+  align-items: center;
+}
 .env-text.active {
   height: 0px;
   display: none;

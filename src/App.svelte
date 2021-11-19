@@ -4,17 +4,27 @@
   import Info from "./components/Info.svelte";
   import Stack from "./components/Stack.svelte";
   import Tech from "./components/Tech.svelte";
+  import { Router, Link, Route } from "svelte-routing";
+  import Login from "./components/Login.svelte";
 </script>
 
-<main>
-  <Header />
-  <div class="app-body">
-    <Info />
-    <Tech />
-    <Stack />
-  </div>
-  <Footer />
-</main>
+<Router>
+  <main>
+    <Route exact path="/Login" component={Login}>
+      <Login />
+    </Route>
+    <Route exact path="/">
+      <Header />
+      <div class="app-body">
+        <Info />
+        <Tech />
+        <Stack />
+      </div>
+      <Footer />
+    </Route>
+  </main>
+</Router>
+
 <!-- GET a new immport -->
 <style>
   .app-body {

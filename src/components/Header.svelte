@@ -1,53 +1,59 @@
 <script>
-  /**@format*/
-  let closeBtn = document.querySelector(".fa-times");
-  let navBtn = document.getElementsByClassName(".fa-bars");
-  const Navz = document.getElementsByClassName(".links-tab");
-  let active = document.querySelector(".active");
-  let showModal = true;
+/**@format*/
+let closeBtn = document.querySelector(".fa-times");
+let navBtn = document.getElementsByClassName(".fa-bars");
+const Navz = document.getElementsByClassName(".links-tab");
+let active = document.querySelector(".active");
 
-  const showNav = () => {
+let showModal = true;
+import {
+    Link
+} from "svelte-routing";
+
+const showNav = () => {
     Navz.active();
     console.log(Navz);
-  };
-  
+};
 </script>
 
 <!-- svelte-ignore a11y-invalid-attribute -->
 <div class="header">
-  <div class="logo">
-    <img
-      src="https://www.jobboardfinder.com/upload/7480cf6f7ec084752d8e78ca4f021bd37c1b30eb/logo_jobboard.png"
-      alt=""
-    />
-    <h3>Fullstack</h3>
-  </div>
-  <i class="fas fa-times" />
-  <div class="links-tab">
-    <a href="#">Home </a>
-    <a href="#"
-      >Courses
-      <i class="fa fa-sort-down" />
-    </a>
-    <a href="#"
-      >Alumni
-      <i class="fa fa-sort-down" />
-    </a>
-    <a href="#"
-      >Contact Us
-      <i class="fa fa-sort-down" />
-    </a>
-    <a href="#">Help </a>
-  </div>
-  <div class="enroll">
-    <button class="sign-btn">Sign In</button>
-    <button class="enroll-btn">Enroll</button>
-  </div>
-  <i class="fas fa-bars" on:click={showNav} />
+    <div class="logo">
+        <img
+            src="https://www.jobboardfinder.com/upload/7480cf6f7ec084752d8e78ca4f021bd37c1b30eb/logo_jobboard.png"
+            alt=""
+            />
+        <h3>Fullstack</h3>
+    </div>
+    <i class="fas fa-times" />
+    <div class="links-tab">
+        <Link to="/">Home</Link>
+        <Link to="#"
+        >Courses
+        <i class="fa fa-sort-down" />
+        </Link>
+        <Link to="#"
+        >Alumni
+        <i class="fa fa-sort-down" />
+        </Link>
+        <Link to="#"
+        >Contact Us
+        <i class="fa fa-sort-down" />
+        </Link>
+        <Link to="#">Help</Link>
+    </div>
+    <div class="enroll">
+        <button class="sign-btn">Sign In</button>
+        <!-- svelte-ignore a11y-missing-attribute -->
+        <Link to="/Login">
+        <button class="enroll-btn">Enroll</button>
+        </Link>
+    </div>
+    <i class="fas fa-bars" on:click={showNav} />
 </div>
 
 <style>
-  .header {
+.header {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -60,41 +66,41 @@
     z-index: 9;
     position: fixed;
     margin-bottom: 30px;
-  }
+}
 
-  .logo {
+.logo {
     display: flex;
     align-items: center;
     transition: all 0.3s ease-in;
     margin-right: 170px;
-  }
+}
 
-  .logo h3 {
+.logo h3 {
     display: none;
     transition: all 0.9s ease;
     cursor: pointer;
     transform: translateX(-20%);
     font-size: 0;
-  }
+}
 
-  .logo:hover img {
+.logo:hover img {
     display: none;
     transition: all 0.9s ease;
-  }
+}
 
-  .logo:hover h3 {
+.logo:hover h3 {
     display: block;
     transform: translateX(-20%);
     transition: all 0.9s ease;
     font-size: 18px;
-  }
+}
 
-  .header img {
+.header img {
     height: 55px;
     object-fit: contain;
-  }
+}
 
-  .links-tab {
+.links-tab {
     border-right: 2px solid gray;
     height: 40%;
     display: flex;
@@ -102,9 +108,9 @@
     align-items: center;
     text-align: center;
     margin-right: -110px;
-  }
+}
 
-  .links-tab a {
+.links-tab a {
     align-items: center;
     display: flex;
     text-decoration: none;
@@ -115,26 +121,26 @@
     transition: all 0.3s ease;
     padding: 4px;
     border-radius: 3px;
-  }
+}
 
-  .links-tab a:hover {
+.links-tab a:hover {
     /* border-top: 2px solid rgb(53, 211, 53);
       border-right: 2px solid black; */
     color: rgb(53, 211, 53);
-  }
+}
 
-  .links-tab a i {
+.links-tab a i {
     margin-left: 10px;
     align-items: center;
     margin-top: -8px;
     color: black;
-  }
+}
 
-  .enroll {
+.enroll {
     display: flex;
-  }
+}
 
-  .enroll button {
+.enroll button {
     border: none;
     outline: none;
     background: none;
@@ -142,13 +148,13 @@
     cursor: pointer;
     color: black;
     transition: all 0.3s ease;
-  }
+}
 
-  button.sign-btn:hover {
+button.sign-btn:hover {
     color: rgb(53, 211, 53);
-  }
+}
 
-  .enroll .enroll-btn {
+.enroll .enroll-btn {
     background: rgb(53, 211, 53);
     padding: 7px 15px 7px 15px;
     border-radius: 3px;
@@ -156,69 +162,78 @@
     text-transform: uppercase;
     font-size: 14px;
     margin-left: 35px;
-  }
-  .fa-bars {
+}
+
+.fa-bars {
     display: none;
-  }
-  .fa-times {
+}
+
+.fa-times {
     display: none;
-  }
-  /* media queries */
-  @media (max-width: 1060px) {
+}
+
+/* media queries */
+@media (max-width: 1060px) {
     .fa-bars {
-      display: block;
-      font-size: 27px !important;
-      color: rgb(53, 211, 53);
+        display: block;
+        font-size: 27px !important;
+        color: rgb(53, 211, 53);
     }
+
     .links-tab {
-      display: none;
-      height: 100%;
-      min-height: 800px;
-      background: rgb(53, 211, 53);
-      color: white;
-      position: absolute;
-      width: 200px;
-      top: 1px;
-      border: none;
-      right: 110px;
+        display: none;
+        height: 100%;
+        min-height: 800px;
+        background: rgb(53, 211, 53);
+        color: white;
+        position: absolute;
+        width: 200px;
+        top: 1px;
+        border: none;
+        right: 110px;
     }
+
     .links-tab.active {
-      display: block;
-      height: 100%;
-      min-height: 800px;
-      background: rgb(53, 211, 53);
-      color: white;
-      position: absolute;
-      width: 200px;
-      top: 1px;
-      border: none;
-      right: 110px;
+        display: block;
+        height: 100%;
+        min-height: 800px;
+        background: rgb(53, 211, 53);
+        color: white;
+        position: absolute;
+        width: 200px;
+        top: 1px;
+        border: none;
+        right: 110px;
     }
 
     .links-tab a {
-      height: 60px;
-      color: white;
-      width: 100%;
-      margin-top: 20px;
-      font-size: 25px;
+        height: 60px;
+        color: white;
+        width: 100%;
+        margin-top: 20px;
+        font-size: 25px;
     }
+
     .links-tab a:hover {
-      color: white;
+        color: white;
     }
+
     .links-tab a i {
-      margin-right: 15px;
+        margin-right: 15px;
     }
+
     .enroll {
-      display: none;
+        display: none;
     }
+
     .fa-times {
-      display: block;
-      font-size: 30px !important;
-      position: absolute;
-      top: 10px;
-      right: 20px;
-      color: white;
-      z-index: 9;
+        display: block;
+        font-size: 30px !important;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        color: white;
+        z-index: 9;
     }
-  }
+}
 </style>
