@@ -75,7 +75,7 @@
     justify-content: space-around;
     width: 250px;
     height: 220px;
-  }
+  } 
   .foot2 .contact-icons {
     display: flex;
     flex-direction: column;
@@ -88,7 +88,7 @@
     margin-left:-80px;
   }
   .foot3{
-    margin-top:-30px;
+    margin-top:-5px;
   }
   .services{
     display:flex;

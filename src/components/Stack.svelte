@@ -15,7 +15,7 @@
 <style>
   .stack {
     margin-top: 80px;
-    margin-bottom: 150px;
+    margin-bottom: 120px;
   }
   .stack-images {
     margin-top: 35px;

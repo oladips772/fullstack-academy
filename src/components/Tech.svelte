@@ -71,11 +71,11 @@
 
 <style>
   .tech {
-    margin-bottom: 125px;
+    margin-bottom: 145px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 80px;
+    margin-top: 20px;
   }
   h2 {
     font-size: 40px;
@@ -121,7 +121,7 @@
     height: 80px;
     position: absolute;
     right: 10px;
-    top: 800px;
+    top: 1100px;
   }
   .tech-side-image img {
     height: 70px;
