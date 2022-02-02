@@ -30,7 +30,7 @@
       >Courses
       <i class="fa fa-sort-down" />
     </Link>
-    <Link to="#"
+    <Link to="/Alumni"
       >Alumni
       <i class="fa fa-sort-down" />
     </Link>

@@ -5,6 +5,7 @@
   export let CourseStack;
   export let CourseSkills;
   export let CourseReq;
+  export let CourseBadge;
 </script>
 
 <div class="course">
