@@ -29,7 +29,6 @@
     border-radius: 50%;
     padding: 5px;
     object-fit: contain;
-    /* box-shadow: rgb(53, 211, 53) 1px 1px 1px 1px; */
     cursor: pointer;
     transition-delay: 0.2s;
     transition: 1s linear;

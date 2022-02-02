@@ -8,10 +8,12 @@
   import Login from "./components/Login.svelte";
   import CoursePage from "./components/CoursePage.svelte";
   import Alumni from "./components/Alumni.svelte";
+  import { fade, slide, scale, crossfade, fly } from "svelte/transition";
+
 </script>
 
 <Router>
-  <main>
+  <main >
     <Route path="/Login">
       <Login />
     </Route>
@@ -27,7 +29,7 @@
     </Route>
     <Route exact path="/">
       <Header />
-      <div class="app-body">
+      <div class="app-body" transition:fly={{ x: 200, duration: 2000 }}>
         <Info />
         <Stack />
         <Tech />
